@@ -92,7 +92,8 @@ h6 {
 }
 
 .text-muted {
-    color: #919aa3 !important
+    color: #919aa3 !important;
+    word-wrap: break-word
 }
 
 .b-b-default {

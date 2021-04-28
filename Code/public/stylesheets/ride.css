@@ -1,0 +1,91 @@
+.ride {
+  box-shadow: 0 0 20px lightgray;
+  -moz-box-shadow: 0 0 20px lightgray;
+  -webkit-box-shadow: 0 0 20px lightgray;
+  -o-box-shadow: 0 0 20px lightgray;
+  padding: 20px 30px 20px 30px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  width: 50%;
+}
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#rideDate {
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: #606060;
+}
+
+#rideTime {
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: #606060;
+}
+
+#car {
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: #606060;
+}
+
+#passengers {
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: #606060;
+}
+
+#conf {
+  background-color: #ae202c;
+  border: none;
+  color: #fff;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,.4);
+  border-radius: 5px;
+  margin: 10px 20px;
+  margin-top: 20px;
+}
+
+
+#start {
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: #606060;
+}
+
+#Cpost {
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: #606060;
+}
+

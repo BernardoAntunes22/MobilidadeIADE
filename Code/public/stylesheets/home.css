@@ -15,11 +15,12 @@ body {
     background-color: black;
     padding: 18px;
     display: flex;
+    margin-bottom: 20px;
     
 }
 
 .leftMenu{
-    width: 30%;
+    width: 40%;
 }
 
 

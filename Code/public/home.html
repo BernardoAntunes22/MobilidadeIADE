@@ -4,21 +4,27 @@
     <title>Portal de Carpooling</title>
     <link rel="stylesheet" href="stylesheets/home.css">
     <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"data-auto-a11y="true"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/map.css">
+    <script src="javascripts/map.js"></script>
   </head>
   <body>
-    <div>
-      <div>
         <div class= "menuBar">
           <div class="leftMenu">
             <a href="home.html"><img src="images/home.png" id="homeImage" class="homeImageC"></a>
             <a href="home.html" class="menuSections">Home</a>
-            <a href="#news" class="menuSections">News</a>
+            <a href="ride.html" class="menuSections">Create Ride</a>
             <a href="#contact" class="menuSections">Contact</a>
           </div>
             <div class="rightMenu">
               <a href="https://www.iade.europeia.pt/"><img src="images/Uni.png" id="uniIcon"></a>
               <a href="profile.html"> <img src="images/User.png" id="userIcon"></a>
             </div>
-        </div>
-    </div>
+        </div><br><br><br>
+        <div id="map"></div>
+
+
+  
+  
   </body>
