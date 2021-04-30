@@ -10,8 +10,6 @@ router.get("/", async function (req, res, next) {
 
 router.post("/", async function (req, res, next) {
   try {
-    let tipoBarco = await Barco.selectById(req.body.B_id);
-    req.body.R_rideLugar = tipoBarco.B_size;
     let rides = await Ride.create(req.body);
     res.send(rides);
   } catch (err) {

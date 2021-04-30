@@ -20,6 +20,9 @@ body{
     padding: 20px 30px 20px 30px;
     text-align: center;
     margin: auto;
+    width:20%;
+    position: absolute;
+    top: 50px;
 }
 
 .logo{
@@ -55,3 +58,9 @@ input[type= text] {
     margin-top: 20px;
     
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+  }

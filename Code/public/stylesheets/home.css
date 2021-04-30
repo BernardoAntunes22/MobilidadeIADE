@@ -68,3 +68,10 @@ body {
 }
 
 
+#logout{
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    margin-left: 20px;
+}
+

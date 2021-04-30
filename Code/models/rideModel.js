@@ -15,19 +15,18 @@ module.exports.select = async () => {
 
 module.exports.create = async (ride) => {
   try {
-    let res = await pool.query("INSERT INTO Reserva SET ?", ride);
-    return { C_id: res.insertId, ...ride };
-  } catch (err) {
-    console.log(
-      "An errror has occured while trying to INSERT into Reservas.\n Dumping Stack.\n",
-      err.stack
-    );
+      let res = await pool.query('INSERT INTO Reserva (DateS, HourS, RideS, nPassengers, matriculaC, C_id) values(?,?,?,?,?,?) ', [ride.DateS, ride.HourS, ride.RideS, ride.nPassengers, ride.matriculaC, ride.C_id]);
+      return res;
+  }
+  catch (err) {
+      console.log('An errror has occured while trying to INSERT into Reservas.\n Dumping Stack.\n', err.stack);
+      return err.message;
   }
 };
 
 module.exports.update = async (id, ride) => {
   try {
-    let keys = Object.keys(ride);
+    let keys = Object.keys(ride);nom
     let vals = Object.values(ride);
     let indexId = keys.indexOf("M_id");
     if (indexId != -1) {

@@ -89,3 +89,11 @@ form {
   color: #606060;
 }
 
+#matricula {
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: #606060;
+}
+
