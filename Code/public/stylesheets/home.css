@@ -20,7 +20,7 @@ body {
 }
 
 .leftMenu{
-    width: 40%;
+    width: 50%;
 }
 
 
@@ -64,7 +64,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     height: 50px;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 
@@ -72,6 +72,6 @@ body {
     display: inline-block;
     vertical-align: middle;
     height: 40px;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 

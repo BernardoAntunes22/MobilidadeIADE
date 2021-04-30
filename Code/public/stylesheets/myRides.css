@@ -1,0 +1,15 @@
+.box{
+    width: 200px;
+    height: 150px;
+    background-color:black;
+    position:absolute;
+    top: 100px;
+    left: 15px;
+    text-align: center;
+    color:white;
+    padding-top: 20px
+}
+
+.boxText:hover{
+    color: grey;
+}
