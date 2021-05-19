@@ -8,3 +8,17 @@
     position: absolute;
 }
 
+.leaflet-popup-content-wrapper {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+#reserva{
+    background-color: #ae202c;
+    border: none;
+    color: #fff;
+    padding: 5px;
+    box-shadow: 0 5px 5px 0 rgba(95,186,233,.4);
+}

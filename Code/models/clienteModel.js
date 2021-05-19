@@ -13,6 +13,28 @@ module.exports.select = async () => {
   }
 };
 
+module.exports.selectByName = async (name) => {
+  try {
+      const cliente = await pool.query('SELECT * FROM Cliente WHERE C_Name = ?', name);
+      return cliente;
+  }
+  catch (err) {
+      console.log('An error has occured while trying to SELECT FROM Clientes.\n Dumping Stack.\n', err.stack);
+      return err.message;
+  }
+};
+
+module.exports.getById = async (id) => {
+  try {
+      const cliente = await pool.query('SELECT * FROM Cliente as C inner join Cod_Post as CP on C.C_id = CP.C_id WHERE C.C_id = 1 ?', id);
+      return cliente;
+  }
+  catch (err) {
+      console.log('An error has occured while trying to SELECT FROM Clientes.\n Dumping Stack.\n', err.stack);
+      return err.message;
+  }
+};
+
 module.exports.create = async (cliente) => {
   try {
     let res = await pool.query("INSERT INTO Reserva SET ?", cliente);

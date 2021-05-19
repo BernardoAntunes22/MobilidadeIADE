@@ -29,6 +29,8 @@ function Iade() {
   }).addTo(map);
 }
 
+
+
 async function rideMarkers(){
   rides = await $.ajax({
       url:"/API/rides",
@@ -36,14 +38,23 @@ async function rideMarkers(){
   });
   for (var idx in rides) {
       let ride = rides[idx];
-      L.marker({lat: ride.R_lat, lon: ride.R_long}, {icon: rideIcon}).addTo(map);
+      L.marker({lat: ride.R_lat, lon: ride.R_long}, {icon: rideIcon}).bindPopup(`<p>Date: ${getDate(ride.DateS)}</p><p>Time: ${ride.HourS}</p><p>Lugares: ${ride.nPassengers}</p><p>Matricula: ${ride.matriculaC}</p><button id= "reserva" onclick="mostralocalizacao(${idx})">Participar</button>`).addTo(map);
   }
+}
+
+function mostralocalizacao(idx) {
+  sessionStorage.setItem("ride", JSON.stringify(rides[idx]));
+  window.location = "reserva.html";
 }
 
 
 
 window.onload = () => {
   map();
-  Iade()
+  Iade();
   rideMarkers();
 };
+
+function getDate(data) {
+  return data.substring(data.indexOf('T'), -1);
+}

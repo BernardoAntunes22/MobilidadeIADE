@@ -18,7 +18,7 @@
   margin: auto;
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
   
@@ -79,6 +79,8 @@ form {
   padding: 10px;
   border-radius: 10px;
   color: #606060;
+  grid-column: 1/3;
+  width: 30%;
 }
 
 #Cpost {

@@ -8,6 +8,7 @@ var indexRouter = require("./routes/index");
 var usersRouter = require('./routes/users');
 var clienteRouter = require("./routes/clienteRoute");
 var rideRouter = require("./routes/rideRoute");
+var participarRouter = require("./routes/participarRoute");
 
 var app = express();
 app.use(cors());
@@ -21,5 +22,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/API/clientes", clienteRouter);
 app.use("/api/rides", rideRouter);
+app.use("/api/participars", participarRouter);
 app.use('/users', usersRouter);
 module.exports = app;

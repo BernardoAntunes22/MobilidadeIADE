@@ -8,6 +8,16 @@ router.get("/", async function (req, res, next) {
   res.send(rides);
 });
 
+router.get("/getById/:rides", async function (req, res, next) {
+  let rides = await Ride.getById(req.params.rides);
+  res.send(rides);
+});
+
+router.get("/getByRide/:rides", async function (req, res, next) {
+  let rides = await Ride.getByRide(req.params.rides);
+  res.send(rides);
+});
+
 router.post("/", async function (req, res, next) {
   try {
     let rides = await Ride.create(req.body);

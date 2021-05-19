@@ -8,6 +8,11 @@ router.get("/", async function (req, res, next) {
   res.send(clientes);
 });
 
+router.get("/getById/:clientes", async function (req, res, next) {
+  let clientes = await Cliente.getById(req.params.clientes);
+  res.send(clientes);
+});
+
 router.post("/", async function (req, res, next) {
   try {
     let tipoBarco = await Barco.selectById(req.body.B_id);
@@ -29,5 +34,22 @@ router.delete("/:id", async function (req, res, next) {
   let cliente = await Cliente.delete(req.params.id);
   res.send({ rowsAffected: cliente });
 });
+
+
+
+router.get("/login/:name", async function(req, res) {
+  let name = req.params.name;
+  let clientes = await Cliente.selectByName(name);
+
+
+  let response = 'Failed';
+  if(clientes.length > 0){
+    response = clientes[0];
+    response.accountType = "Cliente";
+  }
+
+  res.send(response);
+});
+
 
 module.exports = router;

@@ -4,11 +4,6 @@
   <title>Portal de Carpooling</title>
   <link rel="stylesheet" href="stylesheets/home.css" />
   <link rel="stylesheet" href="stylesheets/myRides.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-  <script src="javascripts/myRides.js"></script>
   <script src="javascripts/home.js"></script>
 </head>
 <body class="body">
@@ -31,11 +26,20 @@
   </div>
   <div class="box">
     <div>
-        <a class="boxText" href ="myRides.html">Created</a><br><br>
-        <a class="boxText" href ="myRidesP.html">Participated</a>
+      <a class="boxText" href="myRides.html">Created</a><br /><br />
+      <a class="boxText" href="myRidesP.html">Participated</a>
     </div>
   </div>
 
-  <div id ="ride"><h3>Created</h3>
-
+  <div class="ride">
+    <h3>Participated</h3>
+    <div id="information">
+      <h5>Start</h5>
+      <h5>Day</h5>
+      <h5>Hour</h5>
+      <h5 id="rideI">Start</h5>
+      <h5 id="rideI">Day</h5>
+      <h5 id="rideI">Hour</h5>
+    </div>
+  </div>
 </body>

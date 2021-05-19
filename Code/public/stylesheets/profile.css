@@ -40,7 +40,7 @@ body {
     padding: 20px 0
 }
 
-.card-block {
+#card-block {
     padding: 1.25rem
 }
 
@@ -57,7 +57,7 @@ h6 {
     font-size: 14px
 }
 
-.card .card-block p {
+.card #card-block p {
     line-height: 25px
 }
 
@@ -67,7 +67,7 @@ h6 {
     }
 }
 
-.card-block {
+#card-block {
     padding: 1.25rem
 }
 
@@ -83,7 +83,7 @@ h6 {
     padding-bottom: 5px !important
 }
 
-.card .card-block p {
+.card #card-block p {
     line-height: 25px
 }
 

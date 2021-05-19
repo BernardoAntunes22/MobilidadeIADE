@@ -1,15 +1,46 @@
 .box{
     width: 200px;
-    height: 150px;
+    height: 115px;
     background-color:black;
     position:absolute;
     top: 100px;
     left: 15px;
     text-align: center;
     color:white;
-    padding-top: 20px
+    padding-top: 20px;
+
+}
+
+.boxText{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+
 }
 
 .boxText:hover{
     color: grey;
+    
 }
+
+#ride {
+    box-shadow: 0 0 20px lightgray;
+    -moz-box-shadow: 0 0 20px lightgray;
+    -webkit-box-shadow: 0 0 20px lightgray;
+    -o-box-shadow: 0 0 20px lightgray;
+    padding: 20px 30px 20px 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    width: 50%;
+  }
+
+  #information{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #rideI{
+      color: gray;
+  }
