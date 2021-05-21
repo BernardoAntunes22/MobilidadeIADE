@@ -38,7 +38,7 @@ async function rideMarkers(){
   });
   for (var idx in rides) {
       let ride = rides[idx];
-      L.marker({lat: ride.R_lat, lon: ride.R_long}, {icon: rideIcon}).bindPopup(`<p>Date: ${getDate(ride.DateS)}</p><p>Time: ${ride.HourS}</p><p>Lugares: ${ride.nPassengers}</p><p>Matricula: ${ride.matriculaC}</p><button id= "reserva" onclick="mostralocalizacao(${idx})">Participar</button>`).addTo(map);
+      L.marker({lat: ride.R_lat, lon: ride.R_long}, {icon: rideIcon}).bindPopup(`<p>Date: ${getDate(ride.DateS)}</p><p>Time: ${ride.HourS}</p><p>Lugares: ${ride.nPassengers}</p><p>Marca: ${ride.R_car}</p><p>Modelo: ${ride.R_model}</p><p>Matricula: ${ride.matriculaC}</p><button id= "reserva" onclick="mostralocalizacao(${idx})">Participar</button>`).addTo(map);
   }
 }
 

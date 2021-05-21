@@ -13,6 +13,12 @@ router.get("/getById/:participars", async function (req, res, next) {
   res.send(participars);
 });
 
+router.get("/getRideById/:participars", async function (req, res, next) {
+  let participars = await participar.getRideById(req.params.participars);
+  res.send(participars);
+});
+
+
 router.post("/", async function (req, res, next) {
   try {
     let participars = await participar.create(req.body);

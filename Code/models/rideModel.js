@@ -43,7 +43,7 @@ module.exports.getByRide = async (id) => {
 
 module.exports.create = async (ride) => {
   try {
-      let res = await pool.query('INSERT INTO Ride (DateS, HourS, R_lat, R_long, nPassengers, matriculaC, C_id) values(?,?,?,?,?,?,?) ', [ride.DateS, ride.HourS, ride.R_lat, ride.R_long, ride.nPassengers, ride.matriculaC, ride.C_id]);
+      let res = await pool.query('INSERT INTO Ride (DateS, HourS, R_lat, R_long, nPassengers, matriculaC, R_car, R_model, C_id) values(?,?,?,?,?,?,?,?,?) ', [ride.DateS, ride.HourS, ride.R_lat, ride.R_long, ride.nPassengers, ride.matriculaC, ride.R_car, ride.R_model, ride.C_id]);
       return res;
   }
   catch (err) {

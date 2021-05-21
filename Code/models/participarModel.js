@@ -26,6 +26,19 @@ module.exports.getById = async (id) => {
   }
 };
 
+module.exports.getRideById = async (id) => {
+  try {
+    let res = await pool.query("SELECT * FROM Participar as P inner join Ride as R on R.Ride_id = P.Ride_id where P.C_id = ?", id);
+    return res;
+  } catch (err) {
+    console.log(
+      "An errror has occured while trying to SELECT FROM Participars.\n Dumping Stack.\n",
+      err.stack
+    );
+    return err.message;
+  }
+};
+
 module.exports.create = async (participar) => {
   try {
       let res = await pool.query('INSERT INTO Participar (P_lat, P_long, Ride_id, C_id) values(?,?,?,?) ', [participar.P_lat, participar.P_long, participar.Ride_id, participar.C_id]);

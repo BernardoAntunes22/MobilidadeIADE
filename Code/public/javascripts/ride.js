@@ -47,6 +47,8 @@ async function submit() {
   let rideTime = $("#rideTime").val();
   let passengers = $("#passengers").val();
   let matricula = $("#matricula").val();
+  let marca = $('#car').val();
+  let modelo = $('#model').val();
   let coo = $("#start").val();
 
   
@@ -55,7 +57,9 @@ async function submit() {
     rideTime != "" &&
     passengers != "" &&
     coo != "" &&
-    matricula != ""
+    matricula != ""&&
+    marca != ""&&
+    modelo != ""
   ) {
     coo = coo.toString().replace('[', '');
     coo = coo.replace(']', '');
@@ -70,6 +74,8 @@ async function submit() {
       R_long: coo[0],
       nPassengers: passengers,
       matriculaC: matricula,
+      R_car: marca,
+      R_model: modelo,
       C_id: user.C_id,
     };
 

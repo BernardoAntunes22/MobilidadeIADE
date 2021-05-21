@@ -48,6 +48,14 @@
   color: #606060;
 }
 
+#model {
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: #606060;
+}
+
 #passengers {
   margin: 10px;
   text-align: center;

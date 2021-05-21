@@ -21,16 +21,16 @@ function showInformation(ride) {
         html += `          
         <p>Data</p>
         <p>Hour</p>
-        <p>Start</p>
+        <p>Brand</p>
         <p class="DB">${getDate(ride.DateS)}</p>
         <p class="DB">${ride.HourS}</p>
-        <p class="DB">${ride.R_lat}, ${ride.R_long}</p>
+        <p class="DB">${ride.R_car}</p>
+        <p>Model</p>
         <p>Number of seats</p>
         <p>Matricula</p>
-        <p>State</p>
+        <p class="DB">${ride.R_model}</p>
         <p class="DB">${ride.nPassengers}</p>
-        <p class="DB">${ride.matriculaC}</p>
-        <p class="DB">${ride.rState}</p>`;
+        <p class="DB">${ride.matriculaC}</p>`;
     return html;
 }
 
