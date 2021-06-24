@@ -88,10 +88,16 @@ function parseData(data) {
       coo = coo.replace(' ', '')
       coo = coo.split(',');
       console.log(coo)
+
+      let today = new Date().toISOString().slice(0, 10)
+
+
   
       let body = {
         P_lat: coo[1],
         P_long: coo[0],
+        P_estado: 'Pendente',
+        P_date: today,
         C_id: user.C_id,
         Ride_id: ride.Ride_id
       };

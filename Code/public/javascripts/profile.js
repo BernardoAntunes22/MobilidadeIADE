@@ -14,7 +14,7 @@ async function createCards() {
 
 function showInformation(cliente) {
     let html = "";
-        html += `                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMAÇÃO PESSOAL</h6>
+        html += `<h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMAÇÃO PESSOAL</h6>
         <div class="row">
             <div class="col-sm-6">
                 <p class="m-b-10 f-w-600">Nome</p>

@@ -18,6 +18,18 @@ router.get("/getRideById/:participars", async function (req, res, next) {
   res.send(participars);
 });
 
+router.get("/confirms/:participars", async function (req, res, next) {
+  let participars = await participar.getRideByParticipated(req.params.participars);
+  res.send(participars);
+});
+
+router.get("/info/:participars", async function (req, res, next) {
+  let participars = await participar.getFullInf(req.params.participars);
+  res.send(participars);
+});
+
+
+
 
 router.post("/", async function (req, res, next) {
   try {
@@ -30,8 +42,8 @@ router.post("/", async function (req, res, next) {
 
 router.put("/:id", async function (req, res, next) {
   console.log(req.body);
-  let participar = await participar.update(req.params.id, req.body);
-  res.send(participar);
+  let participars = await participar.update(req.params.id, req.body);
+  res.send(participars);
 });
 
 router.delete("/:id", async function (req, res, next) {

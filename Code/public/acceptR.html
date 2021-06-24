@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Portal de Carpooling</title>
+  <link rel="stylesheet" href="stylesheets/home.css" />
+  <link rel="stylesheet" href="stylesheets/myRides.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="javascripts/acceptR.js"></script>
+  <script src="javascripts/home.js"></script>
+</head>
+<body class="body">
+  <div class="menuBar">
+    <div class="leftMenu">
+      <a href="home.html"
+        ><img src="images/home.png" id="homeImage" class="homeImageC"
+      /></a>
+      <a href="home.html" class="menuSections">Home</a>
+      <a href="ride.html" class="menuSections">Create Ride</a>
+      <a href="myRides.html" class="menuSections">My Rides</a>
+    </div>
+    <div class="rightMenu">
+      <a href="https://www.iade.europeia.pt/"
+        ><img src="images/Uni.png" id="uniIcon"
+      /></a>
+      <a href="profile.html"> <img src="images/User.png" id="userIcon" /></a>
+      <a> <img src="images/Logout.png" id="logout" onclick="logout()" /></a>
+    </div>
+  </div>
+  <div class="box">
+    <div>
+        <a class="boxText" href ="myRides.html">Created</a><br><br>
+        <a class="boxText" href ="myRidesP.html">Participated</a>
+    </div>
+  </div>
+
+  <div id ="ride"><h3>Needs Confirmation</h3>
+
+</body>

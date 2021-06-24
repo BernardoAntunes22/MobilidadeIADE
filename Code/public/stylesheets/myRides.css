@@ -39,8 +39,26 @@
       width: 100%;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      border-bottom: 1px solid darkgray;
   }
 
   #rideI{
       color: gray;
   }
+
+  .btn {
+    background-color: #ae202c;
+    border: none;
+    color: #fff;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,.4);
+    border-radius: 5px;
+    margin: 10px 20px;
+    margin-top: 20px;
+    
+}

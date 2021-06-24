@@ -14,7 +14,7 @@ async function createCards() {
 
 function showInformation(ride) {
     let html = "";
-        html += `<div id="information">
+        html += `<div id="information" onclick = "change(${ride.Ride_id})">
         <h5>Start</h5>
         <h5>Day</h5>
         <h5>Hour</h5>
@@ -31,6 +31,12 @@ window.onload = () => {
     createCards();   
 }
 
+function change(id) {
+    sessionStorage.setItem('ride', id);
+    window.location = 'acceptR.html';
+}
+
 function getDate(data) {
     return data.substring(data.indexOf('T'), -1);
 }
+

@@ -1,5 +1,7 @@
 var map;
 var marker;
+var ride;
+var start;
 
 function map() {
   map = L.map("map").setView([38.70736728020726, -9.152443430499575], 13); //Zoom to IADE
@@ -12,6 +14,35 @@ function map() {
   ).addTo(map);
   
 }
+function setRide(idx){
+  ride = rides[idx];
+  start = L.latLng(ride.R_lat,  ride.R_long)
+  console.log(start)
+  setRota();
+};
+
+
+function setfinal(idx){
+  end = L.latLng(38.70736728020726, -9.152443430499575)
+  setRide(idx)
+};
+
+
+function setRota(){
+  if (end)
+  console.log(start)
+  L.Routing.control({
+      waypoints: [
+          start,
+          end,
+      ],
+      routeWhileDragging: true
+  }).addTo(map);
+}
+
+
+
+
 
 uniIcon = L.icon({
   iconUrl: "images/BUni.png",
@@ -38,7 +69,7 @@ async function rideMarkers(){
   });
   for (var idx in rides) {
       let ride = rides[idx];
-      L.marker({lat: ride.R_lat, lon: ride.R_long}, {icon: rideIcon}).bindPopup(`<p>Date: ${getDate(ride.DateS)}</p><p>Time: ${ride.HourS}</p><p>Lugares: ${ride.nPassengers}</p><p>Marca: ${ride.R_car}</p><p>Modelo: ${ride.R_model}</p><p>Matricula: ${ride.matriculaC}</p><button id= "reserva" onclick="mostralocalizacao(${idx})">Participar</button>`).addTo(map);
+      L.marker({lat: ride.R_lat, lon: ride.R_long}, {icon: rideIcon}).bindPopup(`<p>Date: ${getDate(ride.DateS)}</p><p>Time: ${ride.HourS}</p><p>Lugares: ${ride.nPassengers}</p><p>Marca: ${ride.R_car}</p><p>Modelo: ${ride.R_model}</p><p>Matricula: ${ride.matriculaC}</p><button id= "reserva" onclick="mostralocalizacao(${idx})">Participar</button> <button id= "reserva" onclick="setfinal(${idx})">Rota</button>`).addTo(map);
   }
 }
 
