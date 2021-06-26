@@ -5,6 +5,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
+    background-color: #E3E3E3;
 }
 
 .menuBar{
@@ -12,10 +13,11 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: black;
+    background-color: #C4C4C4;
     padding: 18px;
     display: flex;
     margin-bottom: 20px;
+    color: black;
     
 }
 
@@ -26,7 +28,7 @@ body {
 
 .menuSections{
     text-decoration: none;
-    color: white;
+    color: black;
     padding-bottom: 50px;
     margin: 50px;
     text-align: center;

@@ -28,6 +28,11 @@ router.get("/info/:participars", async function (req, res, next) {
   res.send(participars);
 });
 
+router.get("/accept/:participars", async function (req, res, next) {
+  let participars = await participar.accepted(req.params.participars);
+  res.send(participars);
+});
+
 
 
 

@@ -28,7 +28,7 @@ module.exports.getById = async (id) => {
 
 module.exports.getRideById = async (id) => {
   try {
-    let res = await pool.query("SELECT * FROM Participar as P inner join Ride as R on R.Ride_id = P.Ride_id where P.C_id = ?", id);
+    let res = await pool.query("SELECT * FROM Participar as P inner join Ride as R on R.Ride_id = P.Ride_id where P.P_estado = 'Aceite-Pendente' and P.C_id = ?", id);
     return res;
   } catch (err) {
     console.log(
@@ -41,7 +41,7 @@ module.exports.getRideById = async (id) => {
 
 module.exports.getFullInf = async (id) => {
   try {
-    let res = await pool.query("SELECT * FROM Participar as P inner join Ride as R on R.Ride_id = P.Ride_id inner join Cliente as C on P.C_id = C.C_id where P.Ride_id = ?", id);
+    let res = await pool.query("SELECT * FROM Participar as P inner join Ride as R on R.Ride_id = P.Ride_id inner join Cliente as C on P.C_id = C.C_id where P.P_estado = 'Pendente' and P.Ride_id = ?", id);
     return res;
   } catch (err) {
     console.log(
@@ -55,6 +55,19 @@ module.exports.getFullInf = async (id) => {
 module.exports.getRideByParticipated = async (id) => {
   try {
     let res = await pool.query("SELECT * FROM Participar as P inner join Ride as R on R.Ride_id = P.Ride_id where P.Ride_id = ?", id);
+    return res;
+  } catch (err) {
+    console.log(
+      "An errror has occured while trying to SELECT FROM Participars.\n Dumping Stack.\n",
+      err.stack
+    );
+    return err.message;
+  }
+};
+
+module.exports.accepted = async (id) => {
+  try {
+    let res = await pool.query("SELECT * FROM Participar as P inner join Ride as R on R.Ride_id = P.Ride_id inner join Cliente as C on P.C_id = C.C_id where P.P_estado = 'Aceite-confirmado' and P.C_id = ?", id);
     return res;
   } catch (err) {
     console.log(
