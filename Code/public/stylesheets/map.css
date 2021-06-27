@@ -16,8 +16,15 @@
 }
 
 #reserva{
-    background-color: #ae202c;
+    background-color: #005578;
     border: none;
     color: #fff;
-    padding: 5px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 20px;
+
 }

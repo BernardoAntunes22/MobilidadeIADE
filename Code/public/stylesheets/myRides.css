@@ -51,7 +51,7 @@ body{
   }
 
   .btn {
-    background-color: #ae202c;
+    background-color: #005578;
     border: none;
     color: #fff;
     padding: 15px 80px;
@@ -60,8 +60,7 @@ body{
     display: inline-block;
     text-transform: uppercase;
     font-size: 13px;
-    box-shadow: 0 10px 30px 0 rgba(95,186,233,.4);
-    border-radius: 5px;
+    border-radius: 40px;
     margin: 10px 20px;
     margin-top: 20px;
     
