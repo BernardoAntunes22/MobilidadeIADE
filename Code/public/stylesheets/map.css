@@ -4,14 +4,14 @@
     margin: auto;   
     left: 0;
     right: 0;
-    top: 500px;
+    top: 400px;
     position: absolute;
 }
 
 .leaflet-popup-content-wrapper {
     text-align: center;
-    background-color: black;
-    color: white;
+    background-color: #E3E3E3;
+    color: black;
     padding: 20px;
 }
 
@@ -20,5 +20,4 @@
     border: none;
     color: #fff;
     padding: 5px;
-    box-shadow: 0 5px 5px 0 rgba(95,186,233,.4);
 }

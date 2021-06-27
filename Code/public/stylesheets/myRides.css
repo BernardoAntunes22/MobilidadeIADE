@@ -1,3 +1,6 @@
+body{
+    background-color:lightgray;
+}
 .box{
     width: 200px;
     height: 170px;
@@ -24,15 +27,16 @@
 }
 
 #ride {
-    box-shadow: 0 0 20px lightgray;
-    -moz-box-shadow: 0 0 20px lightgray;
-    -webkit-box-shadow: 0 0 20px lightgray;
-    -o-box-shadow: 0 0 20px lightgray;
+    box-shadow: 0 0 20px white;
+    -moz-box-shadow: 0 0 20px white;
+    -webkit-box-shadow: 0 0 20px white;
+    -o-box-shadow: 0 0 20px white;
     padding: 20px 30px 20px 30px;
     text-align: center;
     margin: auto;
     margin-top: 100px;
     width: 50%;
+    background-color:white;
   }
 
   #information{

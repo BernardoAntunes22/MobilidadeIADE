@@ -13,7 +13,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #C4C4C4;
+    background-color: #FFFFFF;
     padding: 18px;
     display: flex;
     margin-bottom: 20px;
@@ -77,3 +77,76 @@ body {
     margin-left: 40px;
 }
 
+.main{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+#symbol{
+    width: 221.87px;
+}
+
+#tmain{
+    font: Roboto;
+    font-size: 50px;
+}
+
+#tinfor{
+    position: absolute;
+    top: 1100px;
+    left: 0;
+    width: 100%;
+    padding-left: 20px;
+    background-color: white;
+    color: rgba(0, 85, 120, 1);
+}
+
+#infor{
+    position: absolute;
+    top: 1170px;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    background-color: white;
+}
+
+#ep{
+    position: absolute;
+    top: 1410px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(196, 196, 196, 1);
+}
+
+.left{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-family: Roboto;
+    vertical-align: middle;
+}
+
+
+#ue{
+    width: 295px;
+    margin-top:10px;
+}
+
+#insta{
+    margin-top: 10px;
+}
+
+#end{
+    position:relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    font: Roboto;
+    background-color: #B2B2B2;
+}

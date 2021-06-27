@@ -13,16 +13,6 @@ router.get("/getById/:clientes", async function (req, res, next) {
   res.send(clientes);
 });
 
-router.post("/", async function (req, res, next) {
-  try {
-    let tipoBarco = await Barco.selectById(req.body.B_id);
-    req.body.R_clienteLugar = tipoBarco.B_size;
-    let clientes = await Cliente.create(req.body);
-    res.send(clientes);
-  } catch (err) {
-    res.status(400).send(err);
-  }
-});
 
 router.put("/:id", async function (req, res, next) {
   console.log(req.body);
