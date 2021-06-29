@@ -19,11 +19,11 @@ function showInformation(ride) {
     let html = "";
         html += `<div id="information">
         <h5>PickUP</h5>
-        <h5>Name</h5>
-        <h5>Telemóvel</h5>
+        <h5>Data</h5>
+        <h5>Hora</h5>
         <h5 id="rideI">${ride.P_lat}, ${ride.P_long}</h5>
-        <h5 id="rideI">${ride.C_Name}</h5>
-        <h5 id="rideI">${ride.C_telemovel}</h5>
+        <h5 id="rideI">${getDate(ride.DateS)}</h5>
+        <h5 id="rideI">${ride.HourS}</h5>
       </div>`;
     return html;
 }
