@@ -12,9 +12,9 @@ var util = require("util");
 
 var pool = mysql.createPool({
   host: "remotemysql.com",
-  user: "NadbqlK05M",
-  password: "BolQPlyo50",
-  database: "NadbqlK05M",
+  user: "e09LsCX21d",
+  password: "XbfoaRUJTl",
+  database: "e09LsCX21d",
   port: "3306",
 });
 
